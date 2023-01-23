@@ -1,3 +1,6 @@
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.util.Scanner;
 
 public class Invoice {
 private String CustomerFullName;
@@ -7,6 +10,40 @@ private int numberOfItems;
 private boolean totalAmount;
 private boolean paidAmount;
 private boolean balance;
+Scanner sc = new Scanner(System.in);
+
+public void setInvoiceHeader()
+{
+	System.out.println("Enter full name please:");
+	CustomerFullName=sc.next();
+	
+	System.out.println("Enter the your phone number");
+	phoneNumber=sc.nextInt();
+		
+	System.out.println("Enter the invoice Date");
+	invoiceDate=sc.next();
+		
+	System.out.println("Enter the number of Items");
+	numberOfItems=sc.nextInt();
+		
+	try{
+	       FileOutputStream file = new FileOutputStream("Invoice.txt");
+	       ObjectOutputStream out = new ObjectOutputStream(file);
+	       out.writeObject(CustomerFullName);
+	       out.writeObject(phoneNumber);
+	       out.writeObject(invoiceDate);
+	       out.writeObject(numberOfItems);
+	       
+	       out.close();
+	       file.close();
+	       System.out.println("serialized and saved");
+	   }catch (Exception e){
+	     e.printStackTrace();
+	
+	   }	
+	
+}
+
 public String getCustomerFullName() {
 	return CustomerFullName;
 }

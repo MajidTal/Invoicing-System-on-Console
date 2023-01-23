@@ -3,9 +3,8 @@ import java.util.Scanner;
 public class MainMenu {
 
 	public static void main(String[] args) {
-
+		{
 		Scanner sc = new Scanner(System.in);
-
 		System.out.println("---------Welcome To Our System---------");
 		System.out.println("\npress 1: to Join in Shop Settings");
 		System.out.println("press 2: to Manage Shop Items");
@@ -21,7 +20,31 @@ public class MainMenu {
 
 		switch (Menu) {
 		case 1:
-			System.out.println("Shop Settings");
+			System.out.println("1- Shop Settings");
+			System.out.println("2- Load Data (Items and invoices)");
+			System.out.println("3- Set Shop Name (data should be saved)");
+			System.out.println("4- Set Invoice Header (Tel / Fax / Email / Website) (Data should be saved) ");
+			System.out.println("5- Go Back");
+			System.out.println("Please choose number"); 
+			int Menu1 = sc.nextInt();
+			switch (Menu1) {
+			case 1:
+			System.out.println(" Load Data");	
+			break;
+			case 2:
+				System.out.println(" Set Shop Name");	
+				break;
+				
+			case 3:
+				System.out.println("Set Invoice Header");	
+				break;
+				
+			case 4:
+				System.out.println(" Go Back");	
+				break;
+				
+			}
+		
 			break;
 		case 2:
 			System.out.println("Manage Shop Items");
@@ -46,12 +69,9 @@ public class MainMenu {
 			break;
 		default:
 			
-			System.out.println("Not a valid Number.Choose from ( 1 to 8) ");
-			System.out.println("Enter the number again");
-			int b = sc.nextInt();
-
+	
 		}
 
 	}
+	}}
 
-}

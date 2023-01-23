@@ -1,8 +1,25 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Shop {
 	ArrayList<item> itemList = new ArrayList<item>();
 	 ArrayList<Invoice> invoiceList = new  ArrayList<Invoice>();
+	 Scanner sc = new Scanner(System.in);
+	 
+	 private String ShopName; 
+	 public String getShopName() {
+		return ShopName;
+	}
+	public void setShopName(String shopName) {
+		ShopName = shopName;
+	}
+
+	private int Tel; 
+	 private String Fax; 
+	 private String Email;
+	 private String Website;
+	 
+	 
 	 public int getTel() {
 		return Tel;
 	}
@@ -27,11 +44,6 @@ public class Shop {
 	public void setWebsite(String website) {
 		Website = website;
 	}
-	private int Tel; 
-	 private String Fax; 
-	 private String Email;
-	 private String Website;
-	 
-	 
-	 
-}
+
+	}
+
