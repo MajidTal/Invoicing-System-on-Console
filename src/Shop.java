@@ -49,26 +49,6 @@ public class Shop {
 
 
 	public void AddItem() {
-		System.out.println("Enter item id:");
-		int a3 = sc.nextInt();
-		it.setItemId(a3);
-		System.out.println("Enter item Name:");
-		String a4 = sc.next();
-		it.setItemName(a4);
-		System.out.println("Enter the unit Price");
-		double a5 = sc.nextDouble();
-		it.setUnitPrice(a5);
-	
-		System.out.println("Enter the Number Of Items");
-		int a7 = sc.nextInt();
-		it.setNumberOfItems(a7);
-		
-		
-		System.out.println("Enter paid Amount:");
-		double a8 = sc.nextDouble();
-		it.setPaidAmount(a8);
-		
-		
 		
 		itemList.add(it);
 	}
@@ -85,6 +65,28 @@ public class Shop {
 	public void changeItemPrice() {
 		
 	}
+	
+	public void ItemEnter()
+	{
+		item iitem = new item();
+		System.out.println("Manage Shop Items:");  
+		System.out.println("Enter item Name:");
+		String a1 = sc.next();
+		iitem.setItemName(a1);
+		System.out.println("Enter item id:");
+		int a2 = sc.nextInt();
+		iitem.setItemId(a2);
+		System.out.println("Enter the Number Of Items");
+		int a3 = sc.nextInt();
+		iitem.setNumberOfItems(a3);
+		System.out.println("Enter the unit Price");
+		double a4 = sc.nextDouble();
+		iitem.setUnitPrice(a4);
+		System.out.println("Enter paid Amount:");
+		double a5 = sc.nextDouble();
+		iitem.setPaidAmount(a5);
+		itemList.add(iitem);
+}
         
 	public void reportAllItems() {
 		System.out.println("---------- Items Report ----------");
